@@ -31,7 +31,7 @@ Failures must fail closed, remain inspectable, and never trigger automatic adopt
 The first bounded M1 slice adds persisted owner intake/authorization, two approved deliverable
 profiles, pinned organization/task graphs and separate final outcome acceptance. Natural-language
 criteria still require human review. General dynamic teaming and actual self-evolution remain
-future work. See [implementation boundary](m1-projects.zh-CN.md).
+future work. See [implementation boundary](m1-projects.md).
 
 ## Current pilot exclusions
 

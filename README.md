@@ -11,12 +11,12 @@ separately from evolution proposal approval.
 
 This is an executable first slice, not yet a continuously self-improving organization.
 The complete intended organization/evolution system is described in [vision](docs/vision.md).
-[The original discussion audit](docs/design/conversation-audit.zh-CN.md) lists 40 extracted
+[The original discussion audit](docs/design/conversation-audit.md) lists 40 extracted
 items with sources, actual v0.2 behavior and remaining gaps. Documented goals are not
 implemented capabilities; a proposal or approval is not deployed self-improvement.
-The [A1 architecture plan](docs/architecture/target.zh-CN.md) develops those gaps into
+The [A1 architecture plan](docs/architecture/target.md) develops those gaps into
 domain contracts, durable execution, knowledge/evolution governance and an
-[acceptance-driven implementation sequence](docs/architecture/delivery-plan.zh-CN.md).
+[acceptance-driven implementation sequence](docs/architecture/delivery-plan.md).
 The A1 design remains the long-term target. v0.3 implements the first bounded M1 slice;
 it does not complete general dynamic organization or autonomous evolution.
 
@@ -30,12 +30,12 @@ budgets, cross-process execution locking, cooperative cancellation, verified bac
 artifact integrity checks, and report export. It is suitable for controlled local offline
 trials with public/synthetic evidence. Real model quality has not been accepted for production.
 
-v0.3 adds [project intake and authorization](docs/m1-projects.zh-CN.md), immutable charter
+v0.3 adds [project intake and authorization](docs/m1-projects.md), immutable charter
 revisions, two approved team profiles, a validated task graph, source-coverage gates for
 audits, and final owner acceptance tied to exact outcome hashes. Legacy `demo`/`run` remain
 available as operator-invoked kernel exercises; use `project` for charter-governed work.
 
-v0.4 adds the [external project contract](docs/external-project-contract.zh-CN.md).
+v0.4 adds the [external project contract](docs/external-project-contract.md).
 Independent projects install Porga and call `porga.api.ProjectClient` or the `external` CLI;
 their data, state and outputs stay in their own directories. Exact version pins, bounded
 file manifests and explicit data egress authorization are enforced before execution/resume.
@@ -64,7 +64,7 @@ python -m porga external attach --manifest "YOUR_PROJECT/porga.project.json"
 ```
 
 The manifest's directory is the consumer root; relative paths never depend on the calling
-directory. Attach only creates a reviewable draft. Follow the [contract guide](docs/external-project-contract.zh-CN.md)
+directory. Attach only creates a reviewable draft. Follow the [contract guide](docs/external-project-contract.md)
 to authorize, run, inspect and accept. A Python host can use the public SDK without importing
 SQLite or internal modules. Installation does not start a background process or grant data access.
 
@@ -152,7 +152,7 @@ Resuming incomplete online work requires `--allow-replay`, which authorizes poss
 cost. Unknown requests retain budget reservations. Stored run limits/prices remain fixed.
 `cancel RUN_ID` requests a stop at the next boundary; an already-sent request can still bill.
 One OS lock prevents concurrent workflows against the same local store and releases on exit.
-See the [local operations guide](docs/operations.zh-CN.md) for exact procedures.
+See the [local operations guide](docs/operations.md) for exact procedures.
 
 ## Online mode (explicit opt-in)
 
@@ -217,7 +217,7 @@ is refused by older software; rollback uses the old snapshot in a separate data 
 Public visibility and licensing remain owner decisions. The runtime does not create or
 publish Git repositories; publication is separate from evolution approval.
 See the [historical verification record](docs/verification.md).
-中文上手说明：[本地运行与人工审批](docs/quickstart.zh-CN.md)。
+[Local quickstart](docs/quickstart.md).
 Current baseline: [v0.4 verification](docs/verification-v0.4.md).
 Porga Community 0.4.0 is available under the [MIT License](LICENSE).
 Report issues with a sanitized reproduction in the

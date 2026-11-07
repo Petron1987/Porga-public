@@ -4,21 +4,21 @@ v0.4 adds an external-consumer boundary: a versioned manifest and public SDK/CLI
 the existing project service. Consumer projects own their scope, data and state; Porga owns
 generic mechanisms. A host-only file adapter supplies bounded immutable evidence snapshots
 to the existing restricted tools. No dynamic project code is loaded. The complete implemented
-boundary and upgrade rules are in [external contract v1](external-project-contract.zh-CN.md).
+boundary and upgrade rules are in [external contract v1](external-project-contract.md).
 
 This page describes the running local slice. The long-term A1 design is a separate,
 reviewable architecture baseline; documenting it does not activate those capabilities.
 
 | A1 design document | Purpose |
 |---|---|
-| [Target architecture](architecture/target.zh-CN.md) | Five layers, domain boundaries, two closed loops, deployment choices |
-| [Domain contracts](architecture/domain-contracts.zh-CN.md) | Objects, invariants, versioning, ports and data migration |
-| [Project intake and acceptance](architecture/project-genesis.zh-CN.md) | Startup questions, charter agreement, bounded autonomy and owner acceptance |
-| [Execution and governance](architecture/execution-governance.zh-CN.md) | Queue, leases, replay, scheduling, authorization and spend |
-| [Evolution and memory](architecture/evolution-memory.zh-CN.md) | Knowledge/Skill promotion, team lifecycle, experiments, release/rollback |
-| [External learning](architecture/external-learning.zh-CN.md) | Periodic article/video discovery, traceable distillation and evaluated improvement |
-| [Delivery plan](architecture/delivery-plan.zh-CN.md) | M1–M7 dependencies, failure behavior and acceptance evidence |
-| [Architecture decisions](architecture/decisions.zh-CN.md) | Choices, tradeoffs, revisit triggers and unresolved owner policies |
+| [Target architecture](architecture/target.md) | Five layers, domain boundaries, two closed loops, deployment choices |
+| [Domain contracts](architecture/domain-contracts.md) | Objects, invariants, versioning, ports and data migration |
+| [Project intake and acceptance](architecture/project-genesis.md) | Startup questions, charter agreement, bounded autonomy and owner acceptance |
+| [Execution and governance](architecture/execution-governance.md) | Queue, leases, replay, scheduling, authorization and spend |
+| [Evolution and memory](architecture/evolution-memory.md) | Knowledge/Skill promotion, team lifecycle, experiments, release/rollback |
+| [External learning](architecture/external-learning.md) | Periodic article/video discovery, traceable distillation and evaluated improvement |
+| [Delivery plan](architecture/delivery-plan.md) | M1–M7 dependencies, failure behavior and acceptance evidence |
+| [Architecture decisions](architecture/decisions.md) | Choices, tradeoffs, revisit triggers and unresolved owner policies |
 
 ```mermaid
 flowchart TD
@@ -53,7 +53,7 @@ Owner authority sits above these layers. The diagram above is the actual local e
 view, not the full target architecture. The earlier Owner/Organization/Execution/Kernel/
 Evolution table mixed authority and implementation views and omitted the industry layer.
 The original five-layer target is preserved here; future capability is not implied by a
-directory name. See [vision](vision.md) and [source reconciliation](design/conversation-audit.zh-CN.md).
+directory name. See [vision](vision.md) and [source reconciliation](design/conversation-audit.md).
 
 The workflow uses code orchestration instead of model-controlled handoffs: each boundary
 is validated before the next role runs. Research and QA have separate agents and context;
@@ -90,7 +90,7 @@ seals approval to its digest, and rejects execution with changed input/mode/exce
 before model calls. A pending new draft blocks new runs; explicit resume remains pinned to
 the original authorized revision. The organization snapshot records definition versions,
 capabilities and dependencies; execution remains serial, not a general graph scheduler.
-Final owner acceptance is separate from proposal decisions. See [M1 implementation](m1-projects.zh-CN.md).
+Final owner acceptance is separate from proposal decisions. See [M1 implementation](m1-projects.md).
 
 ## Trust boundary
 

@@ -6,8 +6,8 @@ Generated interchange schemas are in
 `protocols/*.schema.json`; run `python scripts/generate_schemas.py` after changes.
 All contracts reject extra fields. Model outputs use SDK structured output validation.
 These are minimal slices of the original target contracts. The v0.2 gaps were recorded in the
-[source audit](design/conversation-audit.zh-CN.md). Matching protocol names do not establish
-full implementation of the original design. See [v0.3 scope](m1-projects.zh-CN.md) for the
+[source audit](design/conversation-audit.md). Matching protocol names do not establish
+full implementation of the original design. See [v0.3 scope](m1-projects.md) for the
 new bounded charter/organization slice; knowledge and experiment/adoption remain future work.
 
 | Contract | Core fields / invariant |
@@ -31,7 +31,7 @@ new bounded charter/organization slice; knowledge and experiment/adoption remain
 
 External charters use version 0.4 and embed the binding. Legacy 0.3 charters remain readable.
 Private classification requires an external binding and never implicitly allows egress.
-See [external contract v1](external-project-contract.zh-CN.md) for live boundary checks,
+See [external contract v1](external-project-contract.md) for live boundary checks,
 explicit OpenAI consent and historical snapshot semantics.
 
 ## State transitions
@@ -70,7 +70,7 @@ remain inspectable; legacy runs cannot resume because their original settings ar
 SQLite user_version=2 adds projects, immutable charter revisions, explicit authorizations,
 run/charter bindings, organization snapshots and acceptance records. v0.2 data is backed up
 to pre-v0.3.sqlite3 before upgrade; existing checkpoints and budgets remain. Old code refuses
-the upgraded database. Future database versions are refused. See [migration/rollback](m1-projects.zh-CN.md).
+the upgraded database. Future database versions are refused. See [migration/rollback](m1-projects.md).
 
 user_version=3 fences older programs from external/private contracts without dropping data
 or changing tables. v0.3 upgrades write pre-v0.4.sqlite3 first; rollback uses the old code

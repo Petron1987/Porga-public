@@ -25,5 +25,5 @@ requirements.json remain unchanged when a design response is added. No live paid
 request, background service, remote publication or deployment was performed.
 
 Before implementation, use the milestone-specific fault injection and acceptance gates
-in `docs/architecture/delivery-plan.zh-CN.md`; do not substitute documentation coverage
+in `docs/architecture/delivery-plan.md`; do not substitute documentation coverage
 or the current 45 tests for future dynamic-team/evolution/continuous-operation acceptance.

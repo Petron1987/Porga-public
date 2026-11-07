@@ -26,16 +26,19 @@ def questions(draft):
         result.append(
             {
                 "field": "deliverable",
-                "question": "需要研究报告还是证据覆盖与缺口审计？",
+                "question": "Do you need a research report or an audit of evidence coverage?",
                 "choices": ["research_report", "evidence_audit"],
             }
         )
     if not draft.success_criteria:
         result.append(
-            {"field": "success_criteria", "question": "什么结果才算你满意？请写明验收条件。"}
+            {
+                "field": "success_criteria",
+                "question": "What result would you accept? Specify the acceptance criteria.",
+            }
         )
     if not draft.non_goals:
-        result.append({"field": "non_goals", "question": "哪些事情明确不做？"})
+        result.append({"field": "non_goals", "question": "What is out of scope?"})
     if draft.mode is None or draft.max_usd is None:
         missing = (["mode"] if draft.mode is None else []) + (
             ["max_usd"] if draft.max_usd is None else []
@@ -44,9 +47,9 @@ def questions(draft):
             {
                 "field": "resources",
                 "missing_fields": missing,
-                "question": "请补充："
-                + "、".join(missing)
-                + "。mode 可选 mock/openai；max_usd 为每次运行的美元上限。",
+                "question": "Provide "
+                + ", ".join(missing)
+                + ". Use mock or openai for mode. Set max_usd as the per-run USD limit.",
             }
         )
     if draft.data_scope is None or not draft.project.evidence:
@@ -57,7 +60,9 @@ def questions(draft):
             {
                 "field": "data",
                 "missing_fields": missing,
-                "question": "请补充：" + "、".join(missing) + "。仅支持获准使用的公开/合成证据。",
+                "question": "Provide "
+                + ", ".join(missing)
+                + ". Use only authorized public or synthetic evidence.",
             }
         )
     return result

@@ -1,7 +1,7 @@
 # Porga long-term vision and design boundaries
 
 Status: requirements and reference design, not a claim of implemented capability.
-See [source audit and current gaps](design/conversation-audit.zh-CN.md).
+See [source audit and current gaps](design/conversation-audit.md).
 
 ## Owner intent and current scope
 
@@ -26,7 +26,7 @@ alone do not establish progress. The system must demonstrate increased verified 
 Learning inputs include internal execution evidence and bounded external discovery from
 articles, talks, videos and research. Traceable distillation feeds testable hypotheses;
 it does not directly activate new system instructions or permissions. See the
-[external learning design](architecture/external-learning.zh-CN.md).
+[external learning design](architecture/external-learning.md).
 
 ## Canonical target architecture
 

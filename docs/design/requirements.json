@@ -6,38 +6,38 @@
   "requirements": [
     {
       "id": "R01",
-      "title": "品牌与正式定位",
-      "origin": "用户明确选择",
+      "title": "Brand and formal positioning",
+      "origin": "Explicit owner decision",
       "sources": [
         "C04",
         "C05"
       ],
-      "status": "已实现",
-      "current": "Porga；Self-Evolving Agent Organization System 已统一。",
-      "gap": "维持品牌稳定，发布名称另行核验。",
+      "status": "implemented",
+      "current": "The project uses Porga and Self-Evolving Agent Organization System.",
+      "gap": "Preserve the brand and verify release names separately.",
       "code_or_document_evidence": [
         "README.md",
         "src/porga/__init__.py"
       ],
-      "design_document": "docs/architecture/target.zh-CN.md",
+      "design_document": "docs/architecture/target.md",
       "planned_milestones": [],
       "design_response_status": "recorded_not_implemented"
     },
     {
       "id": "R02",
-      "title": "命名评价与商标/命名空间清查",
-      "origin": "原助手建议",
+      "title": "Naming, trademarks, and namespaces",
+      "origin": "Historical proposal",
       "sources": [
         "C03",
         "C04"
       ],
-      "status": "待发布核验",
-      "current": "保留易读、易记及可扩展原则。",
-      "gap": "正式核验仓库、组织、PyPI/npm、域名与商标；历史评分不是注册结论。",
+      "status": "pending release review",
+      "current": "Readability, memorability, and extensibility guide naming.",
+      "gap": "Verify repository, organization, package, domain, and trademark availability.",
       "code_or_document_evidence": [
         "docs/vision.md"
       ],
-      "design_document": "docs/architecture/decisions.zh-CN.md",
+      "design_document": "docs/architecture/decisions.md",
       "planned_milestones": [
         "release-review"
       ],
@@ -45,21 +45,21 @@
     },
     {
       "id": "R03",
-      "title": "通用平台与领域实例分离",
-      "origin": "参考设计",
+      "title": "Generic platform and domain instances",
+      "origin": "Reference design",
       "sources": [
         "C03",
         "C04",
         "C05"
       ],
-      "status": "部分实现",
-      "current": "通用代码与领域规则分离，领域模板属于后续规划。",
-      "gap": "提供可加载、可验收的行业 Blueprint 与实例隔离。",
+      "status": "partially implemented",
+      "current": "Generic code is separate from domain rules.",
+      "gap": "Validate loadable domain templates and instance isolation.",
       "code_or_document_evidence": [
         "README.md",
         "src/porga/core/store.py"
       ],
-      "design_document": "docs/architecture/target.zh-CN.md",
+      "design_document": "docs/architecture/target.md",
       "planned_milestones": [
         "M1",
         "M6"
@@ -68,20 +68,20 @@
     },
     {
       "id": "R04",
-      "title": "目标、验证、积累、有界自治四条公理",
-      "origin": "参考设计",
+      "title": "Goals, verification, accumulation, and bounded autonomy",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "章程保留四原则；权限、预算、验证由确定性代码执行。",
-      "gap": "目标驱动组队、跨任务能力积累仍未落地。",
+      "status": "partially implemented",
+      "current": "The charter records the four principles and deterministic controls.",
+      "gap": "Add goal-based team formation and cross-task learning.",
       "code_or_document_evidence": [
         "docs/charter.md",
         "src/porga/core/budget.py",
         "src/porga/core/verification.py"
       ],
-      "design_document": "docs/architecture/target.zh-CN.md",
+      "design_document": "docs/architecture/target.md",
       "planned_milestones": [
         "M1",
         "M3",
@@ -91,19 +91,19 @@
     },
     {
       "id": "R05",
-      "title": "Generate / Operate / Verify / Evolve 主循环",
-      "origin": "参考设计",
+      "title": "Generate, Operate, Verify, Evolve",
+      "origin": "Reference design",
       "sources": [
         "C02",
         "C03"
       ],
-      "status": "部分实现",
-      "current": "有固定团队执行、来源核验和待批提案。",
-      "gap": "补齐经验反馈、候选实验与版本采用后的下一轮循环。",
+      "status": "partially implemented",
+      "current": "The pilot runs a fixed team, verifies sources, and records proposals.",
+      "gap": "Add feedback, candidate experiments, and a verified post-adoption loop.",
       "code_or_document_evidence": [
         "src/porga/workflow.py"
       ],
-      "design_document": "docs/architecture/target.zh-CN.md",
+      "design_document": "docs/architecture/target.md",
       "planned_milestones": [
         "M1",
         "M2",
@@ -114,19 +114,19 @@
     },
     {
       "id": "R06",
-      "title": "L1 Runtime—L5 Projects 五层目标架构",
-      "origin": "参考设计",
+      "title": "Five-layer target architecture",
+      "origin": "Reference design",
       "sources": [
         "C03"
       ],
-      "status": "部分实现",
-      "current": "Runtime、Kernel、Organization 和提案层有代码，行业层没有实现。",
-      "gap": "保留原五层职责；当前流程图不能代替完整目标架构。",
+      "status": "partially implemented",
+      "current": "Runtime, kernel, organization, and proposal code exist.",
+      "gap": "Implement and verify the domain layer and complete the target responsibilities.",
       "code_or_document_evidence": [
         "docs/architecture.md",
         "docs/vision.md"
       ],
-      "design_document": "docs/architecture/target.zh-CN.md",
+      "design_document": "docs/architecture/target.md",
       "planned_milestones": [
         "M1",
         "M6"
@@ -135,64 +135,64 @@
     },
     {
       "id": "R07",
-      "title": "Chief 作为统一入口并按目标规划团队",
-      "origin": "用户目标与参考设计",
+      "title": "Chief and goal-based team planning",
+      "origin": "Owner goal and reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "Chief 只将目标改写为研究问题；强制 research -> qa。",
-      "gap": "基于需求与能力缺口提出团队/计划，Kernel 校验其边界。",
+      "status": "partially implemented",
+      "current": "The Chief frames a research question for a fixed Research and QA sequence.",
+      "gap": "Plan from capability gaps and enforce bounds in the kernel.",
       "code_or_document_evidence": [
         "src/porga/organization/chief.py",
         "src/porga/workflow.py"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M1"
       ],
       "design_response_status": "recorded_not_implemented",
       "related_design_documents": [
-        "docs/architecture/project-genesis.zh-CN.md"
+        "docs/architecture/project-genesis.md"
       ]
     },
     {
       "id": "R08",
-      "title": "Project Genesis 六步项目创生",
-      "origin": "参考设计",
+      "title": "Six-step project intake",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "ProjectSpec 只有目标与证据；没有逐项目章程与业务认知模型。",
-      "gap": "章程、成功标准、风险/资源、假设、停止条件、能力需求、计划与持续调整可追溯。",
+      "status": "partially implemented",
+      "current": "ProjectSpec records a goal and evidence at this baseline.",
+      "gap": "Track the charter, success criteria, constraints, assumptions, capabilities, and plan.",
       "code_or_document_evidence": [
         "src/porga/protocols.py"
       ],
-      "design_document": "docs/architecture/domain-contracts.zh-CN.md",
+      "design_document": "docs/architecture/domain-contracts.md",
       "planned_milestones": [
         "M1"
       ],
       "design_response_status": "recorded_not_implemented",
       "related_design_documents": [
-        "docs/architecture/project-genesis.zh-CN.md"
+        "docs/architecture/project-genesis.md"
       ]
     },
     {
       "id": "R09",
-      "title": "动态 Agent Factory 与丰富 AgentSpec",
-      "origin": "用户目标与参考设计",
+      "title": "Agent Factory and AgentSpec",
+      "origin": "Owner goal and reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "工厂只能实例化 Research/QA；定义只有角色、版本、能力。",
-      "gap": "加入用途、输入输出、模型/Skill、评估、生命周期、项目归属及受控候选注册。",
+      "status": "partially implemented",
+      "current": "The factory instantiates Research and QA with versioned capabilities.",
+      "gap": "Add contracts, model and Skill references, evaluation, lifecycle, and scoped registration.",
       "code_or_document_evidence": [
         "src/porga/organization/factory.py",
         "src/porga/protocols.py"
       ],
-      "design_document": "docs/architecture/domain-contracts.zh-CN.md",
+      "design_document": "docs/architecture/domain-contracts.md",
       "planned_milestones": [
         "M1"
       ],
@@ -200,17 +200,17 @@
     },
     {
       "id": "R10",
-      "title": "临时/长期 Agent 与生命周期",
-      "origin": "参考设计",
+      "title": "Temporary and long-lived agents",
+      "origin": "Reference design",
       "sources": [
         "C02",
         "C03"
       ],
-      "status": "未实现",
-      "current": "没有候选注册、晋升、停用、归档和长期专家状态。",
-      "gap": "用明确状态转换及测试管理临时 Agent 与持久专家。",
+      "status": "not implemented",
+      "current": "The baseline has no candidate promotion or retirement lifecycle.",
+      "gap": "Define and test lifecycle transitions and reuse.",
       "code_or_document_evidence": [],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M1",
         "M5"
@@ -219,19 +219,19 @@
     },
     {
       "id": "R11",
-      "title": "有依赖的任务规划、调度与协作",
-      "origin": "参考设计",
+      "title": "Dependent tasks and scheduling",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "有串行执行、阶段检查点与人工恢复。",
-      "gap": "增加通用任务依赖、优先级、按需并发和跨角色协作验收。",
+      "status": "partially implemented",
+      "current": "The executor is serial, with checkpoints and manual recovery.",
+      "gap": "Add dependency planning, priority, bounded concurrency, and coordination tests.",
       "code_or_document_evidence": [
         "src/porga/workflow.py",
         "src/porga/core/operations.py"
       ],
-      "design_document": "docs/architecture/execution-governance.zh-CN.md",
+      "design_document": "docs/architecture/execution-governance.md",
       "planned_milestones": [
         "M1",
         "M2"
@@ -240,17 +240,17 @@
     },
     {
       "id": "R12",
-      "title": "组织拆分、合并、替换、暂停与淘汰",
-      "origin": "用户明确目标",
+      "title": "Organization topology changes",
+      "origin": "Explicit owner goal",
       "sources": [
         "C02",
         "C03"
       ],
-      "status": "未实现",
-      "current": "固定两类子 Agent，不能自行重组。",
-      "gap": "组织候选需质量/成本/协调/安全对照，不可仅凭 Chief 自述采用。",
+      "status": "not implemented",
+      "current": "The baseline cannot reorganize its fixed team.",
+      "gap": "Compare splits, merges, replacements, pauses, and retirements for quality, cost, and safety.",
       "code_or_document_evidence": [],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M5"
       ],
@@ -258,18 +258,18 @@
     },
     {
       "id": "R13",
-      "title": "Evolution Engine 诊断与候选改进",
-      "origin": "用户目标与参考设计",
+      "title": "Diagnosis and improvement candidates",
+      "origin": "Owner goal and reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "suggest() 按验证是否通过生成两种固定文案。",
-      "gap": "基于失败、耗时、费用、人工纠正等证据，生成实际可比较的变更候选。",
+      "status": "partially implemented",
+      "current": "The gate result selects a fixed proposal template.",
+      "gap": "Generate comparable candidates based on observed failures, effort, and costs.",
       "code_or_document_evidence": [
         "src/porga/evolution/proposals.py"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M4"
       ],
@@ -277,18 +277,18 @@
     },
     {
       "id": "R14",
-      "title": "基线、独立测试集和真实结果评估",
-      "origin": "参考设计",
+      "title": "Independent evaluation",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "未实现",
-      "current": "evaluate() 只运行六个固定门禁回归，不是新旧 Agent 效果比较。",
-      "gap": "有未参与优化的案例、基线版本、质量/费用结果和回归判定。",
+      "status": "not implemented",
+      "current": "Evaluate runs six fixed gate regressions.",
+      "gap": "Freeze baselines and holdout cases and compare quality, cost, and regressions.",
       "code_or_document_evidence": [
         "src/porga/evolution/evaluation.py"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M4"
       ],
@@ -296,19 +296,19 @@
     },
     {
       "id": "R15",
-      "title": "采用、灰度、监控与回滚",
-      "origin": "参考设计",
+      "title": "Adoption and rollback",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "未实现",
-      "current": "批准仅写一条决定；deployment 永远为 not_applied。",
-      "gap": "变更包、评估、授权、版本激活、监控、失败回滚形成受控闭环。",
+      "status": "not implemented",
+      "current": "Approval records a decision; deployment remains not_applied.",
+      "gap": "Implement an evaluated change package, separate activation, monitoring, and rollback.",
       "code_or_document_evidence": [
         "src/porga/protocols.py",
         "src/porga/core/store.py"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M4",
         "M5"
@@ -317,18 +317,18 @@
     },
     {
       "id": "R16",
-      "title": "八个自主递进维度",
-      "origin": "用户目标与参考设计",
+      "title": "Eight dimensions of improvement",
+      "origin": "Owner goal and reference design",
       "sources": [
         "C02"
       ],
-      "status": "设计已保留",
-      "current": "业务认知、知识记忆、专业能力、效率、协作、组织、决策、创新未形成综合能力系统。",
-      "gap": "逐维度定义可验证指标，不能拿单元测试通过替代能力提升。",
+      "status": "design recorded",
+      "current": "The design covers business understanding, memory, skill, efficiency, coordination, organization, decisions, and innovation.",
+      "gap": "Define verifiable measures for each dimension.",
       "code_or_document_evidence": [
         "docs/vision.md"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M3",
         "M4",
@@ -339,19 +339,19 @@
     },
     {
       "id": "R17",
-      "title": "六类长期知识/经验对象",
-      "origin": "参考设计",
+      "title": "Six long-term knowledge types",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "有输入 Evidence、Artifacts、审批 Decisions；并非完整六类知识体系。",
-      "gap": "实现 Evidence/Fact/Hypothesis/Decision/Skill/Lesson 的可检索持久对象与晋升。",
+      "status": "partially implemented",
+      "current": "The pilot stores evidence, artifacts, and decisions.",
+      "gap": "Persist and govern Evidence, Fact, Hypothesis, Decision, Skill, and Lesson.",
       "code_or_document_evidence": [
         "src/porga/protocols.py",
         "src/porga/core/store.py"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M3"
       ],
@@ -359,19 +359,19 @@
     },
     {
       "id": "R18",
-      "title": "记忆来源、可信度、时效、验证和版本",
-      "origin": "参考设计",
+      "title": "Knowledge provenance and validity",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "有证据 ID/标题/原文、成果哈希及审批时间。",
-      "gap": "增加来源定位、有效期、信任/验证状态、知识版本与过期复核。",
+      "status": "partially implemented",
+      "current": "Evidence IDs, text, artifact digests, and decision times are retained.",
+      "gap": "Add locators, validity, verification, versions, and expiry review.",
       "code_or_document_evidence": [
         "src/porga/protocols.py",
         "src/porga/core/store.py"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M3"
       ],
@@ -379,18 +379,18 @@
     },
     {
       "id": "R19",
-      "title": "项目隔离与跨项目知识晋升",
-      "origin": "参考设计",
+      "title": "Project isolation and promotion",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "未实现",
-      "current": "证据工具只读本次任务，但没有显式项目级知识权限与平台晋升机制。",
-      "gap": "不同项目默认隔离；脱敏、授权后才晋升通用经验。",
+      "status": "not implemented",
+      "current": "Evidence tools are scoped to the current task.",
+      "gap": "Verify project isolation and authorize sanitized cross-project promotion separately.",
       "code_or_document_evidence": [
         "src/porga/organization/factory.py"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M3",
         "M7"
@@ -399,41 +399,41 @@
     },
     {
       "id": "R20",
-      "title": "业务假设、优先级与方向演化",
-      "origin": "用户目标与参考设计",
+      "title": "Business assumptions and direction",
+      "origin": "Owner goal and reference design",
       "sources": [
         "C02"
       ],
-      "status": "未实现",
-      "current": "无商业目标跟踪、实验反馈、转向/停止建议机制。",
-      "gap": "建议应绑定真实业务证据；改变最终目标或重大敞口仍交给人决定。",
+      "status": "not implemented",
+      "current": "No business feedback or pivot process exists at the baseline.",
+      "gap": "Tie proposals to observed evidence and leave material decisions with the owner.",
       "code_or_document_evidence": [],
-      "design_document": "docs/architecture/target.zh-CN.md",
+      "design_document": "docs/architecture/target.md",
       "planned_milestones": [
         "M6"
       ],
       "design_response_status": "recorded_not_implemented",
       "related_design_documents": [
-        "docs/architecture/project-genesis.zh-CN.md"
+        "docs/architecture/project-genesis.md"
       ]
     },
     {
       "id": "R21",
-      "title": "Chief 与确定性 Kernel 权力分离",
-      "origin": "参考设计",
+      "title": "Chief and kernel separation",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "已实现（本地范围）",
-      "current": "模型不能改权限、预算、审批或持久库；工厂校验、费用限制与人工决定由内核控制。",
-      "gap": "扩大角色/工具时保持相同边界，并补对应测试。",
+      "status": "implemented in local scope",
+      "current": "The kernel controls capability checks, budgets, and human decisions.",
+      "gap": "Retest those controls as the tool and role catalog grows.",
       "code_or_document_evidence": [
         "src/porga/core/budget.py",
         "src/porga/core/store.py",
         "src/porga/organization/factory.py",
         "tests/test_policy.py"
       ],
-      "design_document": "docs/architecture/execution-governance.zh-CN.md",
+      "design_document": "docs/architecture/execution-governance.md",
       "planned_milestones": [
         "M1",
         "M2",
@@ -443,38 +443,38 @@
     },
     {
       "id": "R22",
-      "title": "L1–L5 分级自治与异常升级",
-      "origin": "原助手建议，待治理决策",
+      "title": "Autonomy levels and escalation",
+      "origin": "Proposal pending governance",
       "sources": [
         "C02"
       ],
-      "status": "未实现",
-      "current": "只有本地固定权限与人工批准，没有通用分级授权引擎。",
-      "gap": "先让所有者明确每级范围，再实施可审计政策；不能把历史建议当作授权。",
+      "status": "not implemented",
+      "current": "The local pilot uses fixed permissions and human approvals.",
+      "gap": "Define and test each level after the owner approves its boundaries.",
       "code_or_document_evidence": [
         "docs/vision.md"
       ],
-      "design_document": "docs/architecture/execution-governance.zh-CN.md",
+      "design_document": "docs/architecture/execution-governance.md",
       "planned_milestones": [
         "owner-policy-review"
       ],
       "design_response_status": "recorded_not_implemented",
       "related_design_documents": [
-        "docs/architecture/project-genesis.zh-CN.md"
+        "docs/architecture/project-genesis.md"
       ]
     },
     {
       "id": "R23",
-      "title": "24 小时按事件持续运转",
-      "origin": "用户明确目标",
+      "title": "Continuous event-driven operation",
+      "origin": "Explicit owner goal",
       "sources": [
         "C02"
       ],
-      "status": "未实现",
-      "current": "CLI 完成一次任务后退出，无定时器、事件监听或常驻 Worker。",
-      "gap": "持久调度、唤醒、监控、恢复与通知可演练；模型按需调用。",
+      "status": "not implemented",
+      "current": "The CLI exits after a run.",
+      "gap": "Add bounded durable schedules, workers, monitoring, and recovery.",
       "code_or_document_evidence": [],
-      "design_document": "docs/architecture/execution-governance.zh-CN.md",
+      "design_document": "docs/architecture/execution-governance.md",
       "planned_milestones": [
         "M2",
         "M7"
@@ -483,20 +483,20 @@
     },
     {
       "id": "R24",
-      "title": "持久队列、去重、优先级、超时和重试",
-      "origin": "参考设计",
+      "title": "Queue, deduplication, priority, timeout, and replay",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "有 request-key 去重、超时、持久状态与显式恢复。",
-      "gap": "尚无通用队列/优先级/后台 Worker；重试需处理副作用和重复费用。",
+      "status": "partially implemented",
+      "current": "The pilot has request-key reuse, timeouts, persistent state, and explicit recovery.",
+      "gap": "Add durable attempts and queues with reconciliation for unknown effects and costs.",
       "code_or_document_evidence": [
         "src/porga/workflow.py",
         "src/porga/core/locking.py",
         "src/porga/core/operations.py"
       ],
-      "design_document": "docs/architecture/execution-governance.zh-CN.md",
+      "design_document": "docs/architecture/execution-governance.md",
       "planned_milestones": [
         "M2"
       ],
@@ -504,19 +504,19 @@
     },
     {
       "id": "R25",
-      "title": "成熟 Runtime 集成与后续适配",
-      "origin": "参考设计；当前 SDK 选型已明确",
+      "title": "Runtime integration and adapters",
+      "origin": "Reference design with chosen SDK",
       "sources": [
         "C02",
         "C03"
       ],
-      "status": "部分实现",
-      "current": "已集成 OpenAI Agents SDK 与离线 Model。",
-      "gap": "MCP、Codex、其他模型/API 是待评估扩展，不是已安装功能。",
+      "status": "partially implemented",
+      "current": "The pilot uses OpenAI Agents SDK and an offline model.",
+      "gap": "Evaluate MCP, other runtimes, and host adapters when needed.",
       "code_or_document_evidence": [
         "src/porga/runtime.py"
       ],
-      "design_document": "docs/architecture/target.zh-CN.md",
+      "design_document": "docs/architecture/target.md",
       "planned_milestones": [
         "runtime-review"
       ],
@@ -524,20 +524,20 @@
     },
     {
       "id": "R26",
-      "title": "跨电脑共享 Bot 状态与长期记忆",
-      "origin": "用户问题与参考设计",
+      "title": "Cross-device state and memory",
+      "origin": "Owner question and reference design",
       "sources": [
         "C01",
         "C02"
       ],
-      "status": "未实现",
-      "current": "SQLite 与本地文件，Git 不同步运行状态。",
-      "gap": "引入身份认证、中心状态/知识服务及并发/项目权限后再共享。",
+      "status": "not implemented",
+      "current": "State is stored in SQLite and local files.",
+      "gap": "Design identity, isolation, central storage, and concurrency before sharing state.",
       "code_or_document_evidence": [
         "src/porga/core/store.py",
         "README.md"
       ],
-      "design_document": "docs/architecture/target.zh-CN.md",
+      "design_document": "docs/architecture/target.md",
       "planned_milestones": [
         "M7"
       ],
@@ -545,19 +545,19 @@
     },
     {
       "id": "R27",
-      "title": "区分配置、执行实例和记忆；联网与数量边界",
-      "origin": "用户问题与参考设计",
+      "title": "Definitions, instances, memory, and connectivity",
+      "origin": "Owner question and reference design",
       "sources": [
         "C01"
       ],
-      "status": "部分实现",
-      "current": "文档区分离线/在线、代码/状态；当前最多两个子 Agent，串行运行。",
-      "gap": "不得把角色定义数量当并发量；跨设备执行与记忆仍待实现。",
+      "status": "partially implemented",
+      "current": "The pilot separates offline and online modes and runs a bounded serial team.",
+      "gap": "Test network, concurrent instance, and cross-device boundaries separately.",
       "code_or_document_evidence": [
         "README.md",
         "src/porga/protocols.py"
       ],
-      "design_document": "docs/architecture/domain-contracts.zh-CN.md",
+      "design_document": "docs/architecture/domain-contracts.md",
       "planned_milestones": [
         "M1",
         "M2",
@@ -567,20 +567,20 @@
     },
     {
       "id": "R28",
-      "title": "本地 Git 到私有 GitHub，再考虑公开",
-      "origin": "用户目标；现有明确授权边界",
+      "title": "Private development and public release",
+      "origin": "Owner goal and authorization boundary",
       "sources": [
         "C03",
         "C05"
       ],
-      "status": "部分实现",
-      "current": "本地仓库、提交、忽略规则与发布前检查已具备；无远端。",
-      "gap": "用户明确授权后再检查/创建 private 仓库、推送并回读验证。",
+      "status": "partially implemented",
+      "current": "The baseline has local history, ignore rules, and a publication guard.",
+      "gap": "Verify each authorized remote and release separately.",
       "code_or_document_evidence": [
         "AGENTS.md",
         "scripts/check_repository.py"
       ],
-      "design_document": "docs/architecture/decisions.zh-CN.md",
+      "design_document": "docs/architecture/decisions.md",
       "planned_milestones": [
         "release-review"
       ],
@@ -588,22 +588,22 @@
     },
     {
       "id": "R29",
-      "title": "源码/Blueprint 与真实数据、密钥分开",
-      "origin": "参考设计与当前治理要求",
+      "title": "Separate source from sensitive project data",
+      "origin": "Reference design and governance",
       "sources": [
         "C01",
         "C03",
         "C05"
       ],
-      "status": "已实现（当前范围）",
-      "current": "仅合成示例；密钥/数据库/日志/虚拟环境被忽略；原聊天本地归档不提交。",
-      "gap": "后续真实数据和跨项目访问需独立数据政策；私有仓库也不存密钥。",
+      "status": "implemented in baseline scope",
+      "current": "Examples are synthetic and local state and credentials are excluded.",
+      "gap": "Preserve scoped data policies and keep private material outside release trees.",
       "code_or_document_evidence": [
         ".gitignore",
         "scripts/check_repository.py",
         "examples/project.json"
       ],
-      "design_document": "docs/architecture/execution-governance.zh-CN.md",
+      "design_document": "docs/architecture/execution-governance.md",
       "planned_milestones": [
         "M3",
         "M6",
@@ -613,44 +613,44 @@
     },
     {
       "id": "R30",
-      "title": "六个核心协议",
-      "origin": "参考设计",
+      "title": "Six core protocols",
+      "origin": "Reference design",
       "sources": [
         "C02",
         "C05"
       ],
-      "status": "部分实现",
-      "current": "ProjectSpec/AgentSpec/TaskSpec/EvolutionProposal/EvaluationGate/PermissionPolicy 均有类型与 Schema。",
-      "gap": "字段仍是最小切片，未覆盖完整项目创生、Agent 生命周期、实验采用和知识晋升。",
+      "status": "partially implemented",
+      "current": "ProjectSpec, AgentSpec, TaskSpec, EvolutionProposal, EvaluationGate, and PermissionPolicy have schemas.",
+      "gap": "Extend the contracts with versioned intake, lifecycle, experiments, adoption, and promotion.",
       "code_or_document_evidence": [
         "src/porga/protocols.py",
         "protocols/ProjectSpec.schema.json"
       ],
-      "design_document": "docs/architecture/domain-contracts.zh-CN.md",
+      "design_document": "docs/architecture/domain-contracts.md",
       "planned_milestones": [
         "M1",
         "M4"
       ],
       "design_response_status": "recorded_not_implemented",
       "related_design_documents": [
-        "docs/architecture/project-genesis.zh-CN.md"
+        "docs/architecture/project-genesis.md"
       ]
     },
     {
       "id": "R31",
-      "title": "长期部署技术栈",
-      "origin": "原助手选项，不是已确定依赖",
+      "title": "Deployment architecture",
+      "origin": "Historical technology candidates",
       "sources": [
         "C01",
         "C02"
       ],
-      "status": "待选型",
-      "current": "当前只有 Python SDK、SQLite、本地文件和 CLI。",
-      "gap": "Next.js/React、Temporal/队列、PostgreSQL/pgvector、S3、RBAC 等随真实需求评估。",
+      "status": "technology choice pending",
+      "current": "The pilot uses Python, SQLite, local files, and the CLI.",
+      "gap": "Evaluate shared infrastructure only when verified requirements justify it.",
       "code_or_document_evidence": [
         "docs/vision.md"
       ],
-      "design_document": "docs/architecture/decisions.zh-CN.md",
+      "design_document": "docs/architecture/decisions.md",
       "planned_milestones": [
         "M2",
         "M7"
@@ -659,20 +659,20 @@
     },
     {
       "id": "R32",
-      "title": "多目标指标与三个核心成效指标",
-      "origin": "参考设计",
+      "title": "Outcome, quality, cost, and autonomy measures",
+      "origin": "Reference design",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "记录部分调用、Token、估算费用、验证结果与人工决定；没有成效看板。",
-      "gap": "覆盖业务价值、质量、协作、经济性、自治、进化、安全；定义 VBV/HD/VIR 的计算与证据。",
+      "status": "partially implemented",
+      "current": "The pilot records calls, tokens, estimated cost, verification, and decisions.",
+      "gap": "Define business value, human dependence, validated improvement, and supporting metrics.",
       "code_or_document_evidence": [
         "src/porga/core/budget.py",
         "src/porga/core/store.py",
         "docs/vision.md"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M2",
         "M4",
@@ -680,24 +680,24 @@
       ],
       "design_response_status": "recorded_not_implemented",
       "related_design_documents": [
-        "docs/architecture/project-genesis.zh-CN.md"
+        "docs/architecture/project-genesis.md"
       ]
     },
     {
       "id": "R33",
-      "title": "P0–P4 能力阶段与晋级条件",
-      "origin": "原助手阶段建议",
+      "title": "Capability stages P0 through P4",
+      "origin": "Historical staging proposal",
       "sources": [
         "C02"
       ],
-      "status": "设计已保留",
-      "current": "当前是 P0 内核切片与运维加固，不能因软件版本 v0.2 就称完成 P2。",
-      "gap": "每一阶段按验收证据晋级，不按版本号推断能力。",
+      "status": "design recorded",
+      "current": "The local kernel covers part of P0.",
+      "gap": "Advance each stage through acceptance evidence.",
       "code_or_document_evidence": [
         "docs/vision.md",
         "docs/roadmap.md"
       ],
-      "design_document": "docs/architecture/delivery-plan.zh-CN.md",
+      "design_document": "docs/architecture/delivery-plan.md",
       "planned_milestones": [
         "M1",
         "M2",
@@ -710,19 +710,19 @@
     },
     {
       "id": "R34",
-      "title": "首个研究任务与失败后自改进试验",
-      "origin": "原助手推荐试验",
+      "title": "First research task and improvement experiment",
+      "origin": "Historical experiment proposal",
       "sources": [
         "C02"
       ],
-      "status": "部分实现",
-      "current": "完成证据受限研究、QA、引用核验与提案。",
-      "gap": "没有联网取证，也没有失败诊断后改研究方法并独立证明改善的实验。",
+      "status": "partially implemented",
+      "current": "Evidence-bounded research, QA, and proposals run locally.",
+      "gap": "Test one diagnosis and candidate against an independent baseline.",
       "code_or_document_evidence": [
         "src/porga/workflow.py",
         "src/porga/core/verification.py"
       ],
-      "design_document": "docs/architecture/evolution-memory.zh-CN.md",
+      "design_document": "docs/architecture/evolution-memory.md",
       "planned_milestones": [
         "M3",
         "M4"
@@ -731,20 +731,20 @@
     },
     {
       "id": "R35",
-      "title": "领域模板与跨领域复用",
-      "origin": "参考设计",
+      "title": "Domain templates and reuse",
+      "origin": "Reference design",
       "sources": [
         "C03",
         "C04",
         "C05"
       ],
-      "status": "未实现",
-      "current": "只有未来路线说明，没有可加载行业模板。",
-      "gap": "用公开或合成案例验证领域模板、任务链和内核边界。",
+      "status": "not implemented",
+      "current": "Domain templates remain planned.",
+      "gap": "Validate synthetic templates on the shared kernel.",
       "code_or_document_evidence": [
         "docs/roadmap.md"
       ],
-      "design_document": "docs/architecture/delivery-plan.zh-CN.md",
+      "design_document": "docs/architecture/delivery-plan.md",
       "planned_milestones": [
         "M6"
       ],
@@ -752,21 +752,21 @@
     },
     {
       "id": "R36",
-      "title": "许可证、仓库/组织/包名和公开品牌",
-      "origin": "用户品牌目标与原助手建议",
+      "title": "License and public identity",
+      "origin": "Owner branding goal and historical proposal",
       "sources": [
         "C04",
         "C05"
       ],
-      "status": "待发布核验",
-      "current": "品牌选定；本地发行名 porga，不代表 PyPI 注册；未选择许可证。",
-      "gap": "分别核验命名空间；发布前明确许可证与脱敏范围，历史候选无需变为代码。",
+      "status": "pending release review",
+      "current": "The historical baseline used the local package name porga.",
+      "gap": "Review namespace, license, and publication scope for each distribution.",
       "code_or_document_evidence": [
         "README.md",
         "pyproject.toml",
         "AGENTS.md"
       ],
-      "design_document": "docs/architecture/decisions.zh-CN.md",
+      "design_document": "docs/architecture/decisions.md",
       "planned_milestones": [
         "release-review"
       ],
@@ -774,21 +774,21 @@
     },
     {
       "id": "R37",
-      "title": "ADAS/GEPA 等研究及厂商事实",
-      "origin": "原助手外部事实主张",
+      "title": "External research and vendor claims",
+      "origin": "Historical external claims",
       "sources": [
         "C01",
         "C02",
         "C03",
         "C04"
       ],
-      "status": "历史参考，未重验",
-      "current": "原文与历史引用被本地保留，没有把产品/研究/商标说法当成当前事实。",
-      "gap": "如将其用于技术决策或公开文章，应重新读取原始来源验证。",
+      "status": "historical reference, not reverified",
+      "current": "Historical references are retained separately from verified facts.",
+      "gap": "Review primary sources before using a claim for engineering or public statements.",
       "code_or_document_evidence": [
         "docs/vision.md"
       ],
-      "design_document": "docs/architecture/decisions.zh-CN.md",
+      "design_document": "docs/architecture/decisions.md",
       "planned_milestones": [
         "source-revalidation"
       ],
@@ -796,20 +796,20 @@
     },
     {
       "id": "R38",
-      "title": "交付可验证的本地项目",
-      "origin": "用户明确要求",
+      "title": "Verifiable local delivery",
+      "origin": "Explicit owner requirement",
       "sources": [
         "C05"
       ],
-      "status": "已实现",
-      "current": "本地代码、README/AGENTS、设计、协议、测试和实际 Git 提交已存在。",
-      "gap": "继续以实际文件、测试与 Git 结果证明动作；远端同步单独按 R28 验收。",
+      "status": "implemented",
+      "current": "Local source, protocols, docs, tests, and Git history exist.",
+      "gap": "Verify outcomes using commands and records and check remote delivery separately.",
       "code_or_document_evidence": [
         "README.md",
         "AGENTS.md",
         "docs/verification-v0.2.md"
       ],
-      "design_document": "docs/architecture/delivery-plan.zh-CN.md",
+      "design_document": "docs/architecture/delivery-plan.md",
       "planned_milestones": [
         "B0"
       ],
@@ -817,19 +817,19 @@
     },
     {
       "id": "R39",
-      "title": "尽量少打扰人，必要时才请求决策",
-      "origin": "用户明确目标；当前刻意收紧",
+      "title": "Bounded human involvement",
+      "origin": "Explicit owner goal with bounded scope",
       "sources": [
         "C02"
       ],
-      "status": "未实现",
-      "current": "每次提案都需人工决定；没有按风险分级自动放行或通知策略。",
-      "gap": "低风险自治范围需所有者批准后实施，不能借长期愿景自授审批权。",
+      "status": "not implemented",
+      "current": "Each proposal requires a human decision.",
+      "gap": "Evaluate escalation and any proposed low-risk autonomy under explicit owner policy.",
       "code_or_document_evidence": [
         "docs/vision.md",
         "src/porga/core/store.py"
       ],
-      "design_document": "docs/architecture/execution-governance.zh-CN.md",
+      "design_document": "docs/architecture/execution-governance.md",
       "planned_milestones": [
         "M2",
         "M5",
@@ -837,25 +837,25 @@
       ],
       "design_response_status": "recorded_not_implemented",
       "related_design_documents": [
-        "docs/architecture/project-genesis.zh-CN.md"
+        "docs/architecture/project-genesis.md"
       ]
     },
     {
       "id": "R40",
-      "title": "个人经营系统、企业平台与组织研发平台",
-      "origin": "原助手产品方向建议",
+      "title": "Local operations, shared service, and research platform",
+      "origin": "Historical product direction",
       "sources": [
         "C02",
         "C03",
         "C04"
       ],
-      "status": "设计已保留",
-      "current": "长期方向保留；当前只有单人本地内核。",
-      "gap": "根据验证价值逐步扩展，不宣称已交付三个产品。",
+      "status": "design recorded",
+      "current": "The baseline delivers a single-user local kernel.",
+      "gap": "Expand only when measured value and separate acceptance justify it.",
       "code_or_document_evidence": [
         "docs/vision.md"
       ],
-      "design_document": "docs/architecture/target.zh-CN.md",
+      "design_document": "docs/architecture/target.md",
       "planned_milestones": [
         "M6",
         "M7"

@@ -6,7 +6,7 @@ two bounded team profiles, separate owner acceptance, durable governance and rec
 This is the first M1 slice, not completion of general dynamic teaming.
 The external consumer contract extends this slice; it does not add a scheduler or real evolution.
 A1 is the long-term design baseline, not a new runtime release. Original-discussion source
-and gaps: [audit](design/conversation-audit.zh-CN.md) and [40 requirements](design/requirements.json).
+and gaps: [audit](design/conversation-audit.md) and [40 requirements](design/requirements.json).
 
 | Milestone | Delivered capability required | Main prerequisite |
 |---|---|---|
@@ -42,12 +42,12 @@ Worker and HTTP delivery are separate decisions. M2 reliability remains a prereq
 where long-running work needs it; an MCP adapter does not establish durable execution.
 The knowledge/evolution milestones M3–M5 retain their existing dependencies and acceptance
 gates. Detailed scope and acceptance are in the
-[integration delivery sequence](architecture/delivery-plan.zh-CN.md#外部接入与分发的四步交付顺序).
+[integration delivery sequence](architecture/delivery-plan.md#integration-delivery-sequence).
 
 Exact deliverables, fault cases, dependencies and acceptance conditions:
-[A1 delivery plan](architecture/delivery-plan.zh-CN.md).
+[A1 delivery plan](architecture/delivery-plan.md).
 For a proposed 1.0 scope and a directory-by-milestone map, see the
-[1.0 architecture and release path](architecture/release-path.zh-CN.md).
+[1.0 architecture and release path](architecture/release-path.md).
 
 P0–P4 maturity stages are not software version numbers. No stage is complete merely
 because a directory, protocol class, architecture diagram or improvement proposal exists.
