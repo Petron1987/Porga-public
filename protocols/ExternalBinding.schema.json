@@ -1,0 +1,200 @@
+{
+  "$defs": {
+    "ExternalProjectSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1",
+          "default": "1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "project_key": {
+          "pattern": "^[a-z][a-z0-9_-]{0,59}$",
+          "title": "Project Key",
+          "type": "string"
+        },
+        "porga_version": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "title": "Porga Version",
+          "type": "string"
+        },
+        "state_dir": {
+          "default": ".porga",
+          "title": "State Dir",
+          "type": "string"
+        },
+        "output_dir": {
+          "default": "porga-results",
+          "title": "Output Dir",
+          "type": "string"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/SourceFile"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Sources",
+          "type": "array"
+        },
+        "goal": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Goal",
+          "type": "string"
+        },
+        "deliverable": {
+          "enum": [
+            "research_report",
+            "evidence_audit"
+          ],
+          "title": "Deliverable",
+          "type": "string"
+        },
+        "success_criteria": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Success Criteria",
+          "type": "array"
+        },
+        "non_goals": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Non Goals",
+          "type": "array"
+        },
+        "classification": {
+          "default": "private",
+          "enum": [
+            "public_synthetic",
+            "private"
+          ],
+          "title": "Classification",
+          "type": "string"
+        },
+        "egress": {
+          "default": "deny",
+          "enum": [
+            "deny",
+            "openai"
+          ],
+          "title": "Egress",
+          "type": "string"
+        },
+        "mode": {
+          "default": "mock",
+          "enum": [
+            "mock",
+            "openai"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "max_usd": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": "0",
+          "title": "Max Usd"
+        },
+        "max_calls": {
+          "default": 6,
+          "maximum": 20,
+          "minimum": 4,
+          "title": "Max Calls",
+          "type": "integer"
+        },
+        "require_all_sources": {
+          "default": true,
+          "title": "Require All Sources",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "project_key",
+        "porga_version",
+        "sources",
+        "goal",
+        "deliverable",
+        "success_criteria",
+        "non_goals"
+      ],
+      "title": "ExternalProjectSpec",
+      "type": "object"
+    },
+    "SourceFile": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z][a-z0-9_-]{0,39}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "path",
+        "sha256"
+      ],
+      "title": "SourceFile",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "root": {
+      "title": "Root",
+      "type": "string"
+    },
+    "manifest_file": {
+      "title": "Manifest File",
+      "type": "string"
+    },
+    "manifest_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Manifest Sha256",
+      "type": "string"
+    },
+    "spec": {
+      "$ref": "#/$defs/ExternalProjectSpec"
+    }
+  },
+  "required": [
+    "root",
+    "manifest_file",
+    "manifest_sha256",
+    "spec"
+  ],
+  "title": "ExternalBinding",
+  "type": "object"
+}

@@ -1,0 +1,55 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "change": {
+      "title": "Change",
+      "type": "string"
+    },
+    "rationale": {
+      "title": "Rationale",
+      "type": "string"
+    },
+    "evaluation_id": {
+      "title": "Evaluation Id",
+      "type": "string"
+    },
+    "evidence_passed": {
+      "title": "Evidence Passed",
+      "type": "boolean"
+    },
+    "deployment": {
+      "const": "not_applied",
+      "default": "not_applied",
+      "title": "Deployment",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "run_id",
+    "status",
+    "change",
+    "rationale",
+    "evaluation_id",
+    "evidence_passed"
+  ],
+  "title": "EvolutionProposal",
+  "type": "object"
+}

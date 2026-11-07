@@ -1,0 +1,44 @@
+{
+  "additionalProperties": false,
+  "description": "Hard kernel boundary, not a model-editable suggestion.",
+  "properties": {
+    "capabilities": {
+      "default": [
+        "read_evidence"
+      ],
+      "items": {
+        "const": "read_evidence",
+        "type": "string"
+      },
+      "title": "Capabilities",
+      "type": "array"
+    },
+    "max_subagents": {
+      "default": 2,
+      "maximum": 2,
+      "minimum": 1,
+      "title": "Max Subagents",
+      "type": "integer"
+    },
+    "external_write": {
+      "const": false,
+      "default": false,
+      "title": "External Write",
+      "type": "boolean"
+    },
+    "shell": {
+      "const": false,
+      "default": false,
+      "title": "Shell",
+      "type": "boolean"
+    },
+    "self_approve": {
+      "const": false,
+      "default": false,
+      "title": "Self Approve",
+      "type": "boolean"
+    }
+  },
+  "title": "PermissionPolicy",
+  "type": "object"
+}

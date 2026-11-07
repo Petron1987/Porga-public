@@ -1,0 +1,151 @@
+{
+  "$defs": {
+    "AgentDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "enum": [
+            "chief",
+            "research",
+            "evidence_auditor",
+            "qa"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "version": {
+          "const": "0.3",
+          "default": "0.3",
+          "title": "Version",
+          "type": "string"
+        },
+        "purpose": {
+          "title": "Purpose",
+          "type": "string"
+        },
+        "capability_id": {
+          "title": "Capability Id",
+          "type": "string"
+        },
+        "permissions": {
+          "items": {
+            "const": "read_evidence",
+            "type": "string"
+          },
+          "title": "Permissions",
+          "type": "array"
+        },
+        "output_contract": {
+          "enum": [
+            "ResearchReport",
+            "QAReview"
+          ],
+          "title": "Output Contract",
+          "type": "string"
+        }
+      },
+      "required": [
+        "role",
+        "purpose",
+        "capability_id",
+        "permissions",
+        "output_contract"
+      ],
+      "title": "AgentDefinition",
+      "type": "object"
+    },
+    "TaskGraph": {
+      "additionalProperties": false,
+      "properties": {
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/TaskNode"
+          },
+          "maxItems": 8,
+          "minItems": 3,
+          "title": "Nodes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "nodes"
+      ],
+      "title": "TaskGraph",
+      "type": "object"
+    },
+    "TaskNode": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z][a-z0-9_-]{0,39}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "chief",
+            "research",
+            "evidence_auditor",
+            "qa"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "depends_on": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Depends On",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "role"
+      ],
+      "title": "TaskNode",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.3",
+      "default": "0.3",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "project_id": {
+      "title": "Project Id",
+      "type": "string"
+    },
+    "charter_revision": {
+      "title": "Charter Revision",
+      "type": "integer"
+    },
+    "agents": {
+      "items": {
+        "$ref": "#/$defs/AgentDefinition"
+      },
+      "title": "Agents",
+      "type": "array"
+    },
+    "task_graph": {
+      "$ref": "#/$defs/TaskGraph"
+    },
+    "rationale": {
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "required": [
+    "project_id",
+    "charter_revision",
+    "agents",
+    "task_graph",
+    "rationale"
+  ],
+  "title": "OrganizationRevision",
+  "type": "object"
+}

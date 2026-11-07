@@ -1,0 +1,31 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "research_question": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Research Question",
+      "type": "string"
+    },
+    "roles": {
+      "items": {
+        "enum": [
+          "research",
+          "evidence_auditor",
+          "qa"
+        ],
+        "type": "string"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "title": "Roles",
+      "type": "array"
+    }
+  },
+  "required": [
+    "research_question",
+    "roles"
+  ],
+  "title": "Plan",
+  "type": "object"
+}

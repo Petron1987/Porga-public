@@ -1,0 +1,1 @@
+Synthetic project: preserve source documents, require exact quotes and independent QA.

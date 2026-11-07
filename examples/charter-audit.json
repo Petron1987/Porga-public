@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.3",
+  "project": {
+    "goal": "Summarize Porga's approved operating principles with traceable evidence.",
+    "evidence": [
+      {
+        "id": "charter",
+        "title": "Porga operating principles (synthetic demo)",
+        "text": "Porga creates bounded teams, verifies artifacts, and requires human approval for evolution decisions."
+      },
+      {
+        "id": "governance",
+        "title": "Porga governance (synthetic demo)",
+        "text": "Research agents may read the approved evidence bundle. They may not execute shell commands, publish externally, or approve their own proposals."
+      }
+    ]
+  },
+  "deliverable": "evidence_audit",
+  "success_criteria": [
+    "Every finding quotes an approved source exactly.",
+    "Describe uncertainty; do not claim external verification."
+  ],
+  "non_goals": [
+    "No live browsing, code execution, or publication."
+  ],
+  "budget_scope": "per_run",
+  "max_usd": "0",
+  "max_calls": 6,
+  "data_scope": "public_synthetic",
+  "mode": "mock",
+  "require_all_sources": true
+}

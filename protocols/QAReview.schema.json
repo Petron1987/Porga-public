@@ -1,0 +1,23 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "passed": {
+      "title": "Passed",
+      "type": "boolean"
+    },
+    "issues": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "title": "Issues",
+      "type": "array"
+    }
+  },
+  "required": [
+    "passed",
+    "issues"
+  ],
+  "title": "QAReview",
+  "type": "object"
+}

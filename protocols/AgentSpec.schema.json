@@ -1,0 +1,37 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "role": {
+      "enum": [
+        "research",
+        "evidence_auditor",
+        "qa"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "version": {
+      "default": "0.1",
+      "enum": [
+        "0.1",
+        "0.3"
+      ],
+      "title": "Version",
+      "type": "string"
+    },
+    "capabilities": {
+      "default": [],
+      "items": {
+        "const": "read_evidence",
+        "type": "string"
+      },
+      "title": "Capabilities",
+      "type": "array"
+    }
+  },
+  "required": [
+    "role"
+  ],
+  "title": "AgentSpec",
+  "type": "object"
+}

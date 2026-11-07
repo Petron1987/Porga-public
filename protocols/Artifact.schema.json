@@ -1,0 +1,35 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "kind": {
+      "title": "Kind",
+      "type": "string"
+    },
+    "sha256": {
+      "title": "Sha256",
+      "type": "string"
+    },
+    "content": {
+      "additionalProperties": true,
+      "title": "Content",
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "run_id",
+    "kind",
+    "sha256",
+    "content"
+  ],
+  "title": "Artifact",
+  "type": "object"
+}

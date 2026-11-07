@@ -1,0 +1,30 @@
+{
+  "schema_version": "1",
+  "project_key": "synthetic-consumer",
+  "porga_version": "0.4.0",
+  "state_dir": ".porga",
+  "output_dir": "porga-results",
+  "sources": [
+    {
+      "id": "principles",
+      "title": "Synthetic project principles",
+      "path": "principles.txt",
+      "sha256": "15897aabac35e56fabc2fc7c7f0f0763c0d36247c71ff272b8dfef7fbe4f6fe6"
+    }
+  ],
+  "goal": "Audit the supplied synthetic project principles.",
+  "deliverable": "evidence_audit",
+  "success_criteria": [
+    "Cover each approved source with a literal quote.",
+    "State uncertainty and keep source documents unchanged."
+  ],
+  "non_goals": [
+    "No external publication, shell execution or automatic deployment."
+  ],
+  "classification": "private",
+  "egress": "deny",
+  "mode": "mock",
+  "max_usd": "0",
+  "max_calls": 6,
+  "require_all_sources": true
+}

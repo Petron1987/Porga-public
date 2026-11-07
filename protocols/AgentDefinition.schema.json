@@ -1,0 +1,54 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "role": {
+      "enum": [
+        "chief",
+        "research",
+        "evidence_auditor",
+        "qa"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "version": {
+      "const": "0.3",
+      "default": "0.3",
+      "title": "Version",
+      "type": "string"
+    },
+    "purpose": {
+      "title": "Purpose",
+      "type": "string"
+    },
+    "capability_id": {
+      "title": "Capability Id",
+      "type": "string"
+    },
+    "permissions": {
+      "items": {
+        "const": "read_evidence",
+        "type": "string"
+      },
+      "title": "Permissions",
+      "type": "array"
+    },
+    "output_contract": {
+      "enum": [
+        "ResearchReport",
+        "QAReview"
+      ],
+      "title": "Output Contract",
+      "type": "string"
+    }
+  },
+  "required": [
+    "role",
+    "purpose",
+    "capability_id",
+    "permissions",
+    "output_contract"
+  ],
+  "title": "AgentDefinition",
+  "type": "object"
+}

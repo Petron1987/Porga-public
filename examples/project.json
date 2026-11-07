@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.1",
+  "goal": "Summarize the approved project principles with exact supporting quotes.",
+  "evidence": [
+    {
+      "id": "principles",
+      "title": "Synthetic public-safe demonstration evidence",
+      "text": "Porga organizes bounded agents around goals, verifies their artifacts, and records human decisions before adopting evolution proposals."
+    }
+  ]
+}

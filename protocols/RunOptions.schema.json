@@ -1,0 +1,99 @@
+{
+  "additionalProperties": false,
+  "description": "Host resource limits/prices; manifest limits additionally apply. No path or mode override.",
+  "properties": {
+    "model": {
+      "default": "",
+      "title": "Model",
+      "type": "string"
+    },
+    "input_price": {
+      "anyOf": [
+        {
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "default": "0",
+      "title": "Input Price"
+    },
+    "output_price": {
+      "anyOf": [
+        {
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "default": "0",
+      "title": "Output Price"
+    },
+    "max_usd": {
+      "anyOf": [
+        {
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "default": "0.50",
+      "title": "Max Usd"
+    },
+    "daily_max_usd": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "default": "2.00",
+      "title": "Daily Max Usd"
+    },
+    "max_calls": {
+      "default": 6,
+      "maximum": 20,
+      "minimum": 1,
+      "title": "Max Calls",
+      "type": "integer"
+    },
+    "max_tokens": {
+      "default": 80000,
+      "minimum": 1,
+      "title": "Max Tokens",
+      "type": "integer"
+    },
+    "max_output_tokens": {
+      "default": 1600,
+      "maximum": 4096,
+      "minimum": 128,
+      "title": "Max Output Tokens",
+      "type": "integer"
+    },
+    "max_input_bytes": {
+      "default": 16000,
+      "maximum": 64000,
+      "minimum": 1024,
+      "title": "Max Input Bytes",
+      "type": "integer"
+    },
+    "timeout_seconds": {
+      "default": 45,
+      "exclusiveMinimum": 0,
+      "maximum": 300,
+      "title": "Timeout Seconds",
+      "type": "number"
+    }
+  },
+  "title": "RunOptions",
+  "type": "object"
+}

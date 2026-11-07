@@ -1,0 +1,53 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "role": {
+      "enum": [
+        "chief",
+        "research",
+        "evidence_auditor",
+        "qa"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "running",
+        "completed",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "artifact_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Artifact Id"
+    }
+  },
+  "required": [
+    "id",
+    "run_id",
+    "role",
+    "status"
+  ],
+  "title": "TaskSpec",
+  "type": "object"
+}

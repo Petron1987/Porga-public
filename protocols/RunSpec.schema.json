@@ -1,0 +1,57 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.2",
+      "default": "0.2",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "mock",
+        "openai"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "running",
+        "failed",
+        "interrupted",
+        "cancel_requested",
+        "cancelled",
+        "awaiting_approval",
+        "validation_failed",
+        "approved",
+        "rejected"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "request_key": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Request Key"
+    }
+  },
+  "required": [
+    "id",
+    "mode",
+    "status"
+  ],
+  "title": "RunSpec",
+  "type": "object"
+}

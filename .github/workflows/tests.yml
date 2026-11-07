@@ -1,0 +1,28 @@
+name: Offline checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.12"]
+    env:
+      OPENAI_AGENTS_DISABLE_TRACING: "1"
+      PORGA_MODE: mock
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -c requirements.lock.txt -e ".[dev]"
+      - run: python -m pip check
+      - run: python -m ruff check src tests scripts
+      - run: python -m pytest -q
+      - run: python scripts/generate_schemas.py
+      - run: git diff --exit-code protocols
+      - run: python scripts/check_repository.py
+      - run: python -m porga demo --mode mock
+      - run: python -m pip wheel --no-deps --wheel-dir dist .
+      - run: python scripts/check_external_consumer.py dist

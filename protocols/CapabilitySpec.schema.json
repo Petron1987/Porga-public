@@ -1,0 +1,37 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "purpose": {
+      "title": "Purpose",
+      "type": "string"
+    },
+    "permissions": {
+      "items": {
+        "const": "read_evidence",
+        "type": "string"
+      },
+      "title": "Permissions",
+      "type": "array"
+    },
+    "output_contract": {
+      "enum": [
+        "ResearchReport",
+        "QAReview"
+      ],
+      "title": "Output Contract",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "purpose",
+    "permissions",
+    "output_contract"
+  ],
+  "title": "CapabilitySpec",
+  "type": "object"
+}
